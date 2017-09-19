@@ -1,10 +1,12 @@
+@HtmlImport('examples.html');
 library examples;
 
 import 'package:polymer/polymer.dart';
+import 'package:web_components/web_components.dart' show HtmlImport;
 
-@CustomTag('widget-examples')
+@PolymerRegister('widget-examples')
 class Examples extends PolymerElement {
-  final links = ['spark_button',
+  @property final links = ['spark_button',
                  'spark_dialog',
                  'spark_icon',
                  'spark_menu',

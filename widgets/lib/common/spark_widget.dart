@@ -35,7 +35,7 @@ const published_reflected = const PublishedProperty(reflect: true);
  * Provides some common boilerplate and useful utility methods.
  * Not intended to be used directly.
  */
-@CustomTag('spark-widget')
+@PolymerRegister('spark-widget')
 class SparkWidget extends PolymerElement {
   Element _focusableChild;
 

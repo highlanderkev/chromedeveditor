@@ -2,20 +2,23 @@
 // All rights reserved. Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+@HtmlImport('spark_tree_view_node.html')
+
 library spark_widgets.tree_view_node;
 
 import 'package:polymer/polymer.dart';
+import 'package:web_components/web_components.dart' show HtmlImport;
 
 import '../../common/spark_widget.dart';
 import '../spark_tree_view_model.dart';
 
-@CustomTag('spark-tree-view-node')
+@PolymerRegister('spark-tree-view-node')
 class SparkTreeViewNode extends SparkWidget {
-  @published SparkTreeViewModel treeModel;
-  @published String name;
-  @published String path;
-  @published int level;
-  @published bool expanded;
+  @property SparkTreeViewModel treeModel;
+  @property String name;
+  @property String path;
+  @property int level;
+  @property bool expanded;
 
   @observable String selfHtml;
   @observable List<SparkTreeViewNode> childrenNames;
